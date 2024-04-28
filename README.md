@@ -11,6 +11,12 @@ Monkey can perform actions over the following HTML elements
 3. `<select>`
 4. `<button>`
 
+## Install
+Step Zero. Install the necessary dependencies by going to the root of the project and running:
+```
+  npm install
+```
+
 ## Execution
 
 First you got to open Cypress
