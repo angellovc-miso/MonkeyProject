@@ -61,7 +61,7 @@ const getRandomElement = (elementType) => {
   return elements.get(getRandomInt(0, elements.length));
 }
 
-const monkeys = (monkeysLeft = 1) => {
+const randomEvent = (monkeysLeft = 1) => {
   if (monkeysLeft <= 0) return;
   const event = allowedEvents[getRandomInt(0, allowedEvents.length)];
   cy.wrap(`Monkey is looking for "${event}" elements`).then(() => {
@@ -75,7 +75,7 @@ const monkeys = (monkeysLeft = 1) => {
 
   }).then(() => {
     cy.wait(1000)
-    monkeys(monkeysLeft - 1)
+    randomEvent(monkeysLeft - 1)
   });
 }
 
@@ -85,7 +85,7 @@ describe('Los estudiantes under monkeys', function() {
     cy.visit(WEB_PAGE);
       cy.wait(1000)
       cy.log(`Start monkeying page ${WEB_PAGE}`)
-      monkeys(AMOUNT_OF_MONKEYS)
+      randomEvent(AMOUNT_OF_MONKEYS)
   })
 });
 
