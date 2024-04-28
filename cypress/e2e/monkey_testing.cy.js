@@ -3,6 +3,8 @@ import { faker } from '@faker-js/faker';
 
 const WEB_PAGE = 'https://losestudiantes.co'
 
+const AMOUNT_OF_MONKEYS = 60;
+
 
 /**
  * @param {int} min 
@@ -83,7 +85,7 @@ describe('Los estudiantes under monkeys', function() {
     cy.visit(WEB_PAGE);
       cy.wait(1000)
       cy.log(`Start monkeying page ${WEB_PAGE}`)
-      monkeys(30)
+      monkeys(AMOUNT_OF_MONKEYS)
   })
 });
 
